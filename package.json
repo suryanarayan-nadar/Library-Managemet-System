@@ -1,0 +1,26 @@
+{
+  "name": "library-management-system",
+  "version": "1.0.0",
+  "description": "Library Management System",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suryanarayan-nadar/Library-Managemet-System.git"
+  },
+  "author": "Suryanarayan Nadar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suryanarayan-nadar/Library-Managemet-System/issues"
+  },
+  "homepage": "https://github.com/suryanarayan-nadar/Library-Managemet-System#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
