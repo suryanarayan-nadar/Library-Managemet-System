@@ -12,6 +12,12 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("*", (req, res) => {
+  res.status(404).json({
+    message: "This route doesn't exist",
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
