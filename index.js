@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
  * Parameters : None
  */
 
-app.get("/users", (req, res) => {
+router.get("/users", (req, res) => {
   res.status(200).json({
     success: true,
     data: users,
@@ -37,7 +37,7 @@ app.get("/users", (req, res) => {
  * Parameters : Id
  */
 
-app.get("/users/:id", (req, res) => {
+router.get("/users/:id", (req, res) => {
   const { id } = req.params;
   console.log(req.params);
   const user = users.find((each) => each.id === id);
@@ -63,7 +63,7 @@ app.get("/users/:id", (req, res) => {
  * Parameters : Id
  */
 
-app.post("/users", (req, res) => {
+router.post("/users", (req, res) => {
   const { id, name, surname, email, subscriptionType, subscriptionDate } =
     req.body;
 
@@ -99,7 +99,7 @@ app.post("/users", (req, res) => {
  * Parameters : Id
  */
 
-app.put("/users/:id", (req, res) => {
+router.put("/users/:id", (req, res) => {
   const { id } = req.params;
   const { data } = req.body;
 
@@ -134,7 +134,7 @@ app.put("/users/:id", (req, res) => {
  * Parameters : Id
  */
 
-app.delete("/users/:id", (req, res) => {
+router.delete("/users/:id", (req, res) => {
   const { id } = req.params;
   const user = users.find((each) => each.id === id);
   if (!user) {
@@ -143,7 +143,14 @@ app.delete("/users/:id", (req, res) => {
       message: "User Doesn't Exit",
     });
   }
-  // need to build logic to delete the user
+  const index = users.indexOf(user);
+  users.splice(index, 1);
+
+  return res.status(200).json({
+    success: true,
+    message: "User deleted successfully",
+    data: users,
+  });
 });
 
 app.get("*", (req, res) => {
