@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
  * Parameters : None
  */
 
-router.get("/users", (req, res) => {
+app.get("/users", (req, res) => {
   res.status(200).json({
     success: true,
     data: users,
@@ -37,7 +37,7 @@ router.get("/users", (req, res) => {
  * Parameters : Id
  */
 
-router.get("/users/:id", (req, res) => {
+app.get("/users/:id", (req, res) => {
   const { id } = req.params;
   console.log(req.params);
   const user = users.find((each) => each.id === id);
@@ -63,7 +63,7 @@ router.get("/users/:id", (req, res) => {
  * Parameters : Id
  */
 
-router.post("/users", (req, res) => {
+app.post("/users", (req, res) => {
   const { id, name, surname, email, subscriptionType, subscriptionDate } =
     req.body;
 
@@ -99,7 +99,7 @@ router.post("/users", (req, res) => {
  * Parameters : Id
  */
 
-router.put("/users/:id", (req, res) => {
+app.put("/users/:id", (req, res) => {
   const { id } = req.params;
   const { data } = req.body;
 
@@ -134,7 +134,7 @@ router.put("/users/:id", (req, res) => {
  * Parameters : Id
  */
 
-router.delete("/users/:id", (req, res) => {
+app.delete("/users/:id", (req, res) => {
   const { id } = req.params;
   const user = users.find((each) => each.id === id);
   if (!user) {
