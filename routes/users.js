@@ -151,7 +151,7 @@ router.delete("/:id", (req, res) => {
  * Parameters : Id
  */
 
-router.get("/subcsrition-details/:id", (req, res) => {
+router.get("/subcription-details/:id", (req, res) => {
   const { id } = req.params;
   const user = users.find((each) => each.id === id);
 
