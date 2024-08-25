@@ -18,9 +18,9 @@
       "email": "user@email.com",
       "issuedBook": "2",
       "issuedDate": "01/07/2021",
-      "returnDate": "01/10/2021",
+      "returnDate": "01/12/2021",
       "subscriptionType": "Basic",
-      "subscriptionDate": "03/01/2022"
+      "subscriptionDate": "01/07/2021"
     },
     {
       "id": "3",
@@ -30,8 +30,8 @@
       "issuedBook": "3",
       "issuedDate": "01/07/2021",
       "returnDate": "01/10/2021",
-      "subscriptionType": "Basic",
-      "subscriptionDate": "01/01/2022"
+      "subscriptionType": "Standard",
+      "subscriptionDate": "01/07/2021"
     },
     {
       "id": "4",
